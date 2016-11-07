@@ -1,0 +1,4 @@
+verilog work "ram_1w2r.v"
+verilog work "ff_lib.v"
+verilog work "wave_display.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

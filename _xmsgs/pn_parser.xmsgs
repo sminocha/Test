@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated   -->
+<!--     by the Xilinx ISE software.  Any direct editing or        -->
+<!--     changes made to this file may result in unpredictable     -->
+<!--     behavior or data corruption.  It is strongly advised that -->
+<!--     users do not edit the contents of this file.              -->
+<!--                                                               -->
+<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+
+<messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/groups/02/lab5/dvi_controller_top.v&quot; into library work</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/dvi_controller_top.v</arg>&quot; Line <arg fmt="%d" index="2">11</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;dvi_defines.v&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/dvi_controller_top.v</arg>&quot; Line <arg fmt="%d" index="2">17</arg>. <arg fmt="%s" index="3">Macro &lt;COLOR_WIDTH&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/dvi_controller_top.v</arg>&quot; Line <arg fmt="%d" index="2">25</arg>. <arg fmt="%s" index="3">Macro &lt;log2NUM_COLS&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/dvi_controller_top.v</arg>&quot; Line <arg fmt="%d" index="2">26</arg>. <arg fmt="%s" index="3">Macro &lt;log2NUM_ROWS&gt; is not defined.</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/groups/02/lab5/sync_generators.v&quot; into library work</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">11</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;dvi_defines.v&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">21</arg>. <arg fmt="%s" index="3">Macro &lt;log2NUM_COLS&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">22</arg>. <arg fmt="%s" index="3">Macro &lt;log2NUM_ROWS&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">26</arg>. <arg fmt="%s" index="3">Macro &lt;log2NUM_XCLKS_IN_ROW&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">27</arg>. <arg fmt="%s" index="3">Macro &lt;log2NUM_LINES_IN_FRAME&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">35</arg>. <arg fmt="%s" index="3">Macro &lt;NUM_XCLKS_IN_ROW&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">43</arg>. <arg fmt="%s" index="3">Macro &lt;H_SYNC_PULSE&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">43</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">47</arg>. <arg fmt="%s" index="3">Macro &lt;NUM_LINES_IN_FRAME&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">55</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Macro &lt;V_SYNC_PULSE&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">58</arg>. <arg fmt="%s" index="3">Macro &lt;H_BACK_PORCH&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">58</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">59</arg>. <arg fmt="%s" index="3">Macro &lt;H_FRONT_PORCH&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">60</arg>. <arg fmt="%s" index="3">Macro &lt;V_BACK_PORCH&gt; is not defined.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">60</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/sync_generators.v</arg>&quot; Line <arg fmt="%d" index="2">61</arg>. <arg fmt="%s" index="3">Macro &lt;V_FRONT_PORCH&gt; is not defined.</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;Z:/groups/02/lab5/wave_display_tb.v&quot; into library work</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">Z:/groups/02/lab5/wave_display_tb.v</arg>&quot; Line <arg fmt="%d" index="2">3</arg>. <arg fmt="%s" index="3">Syntax error near &quot;;&quot;.</arg>
+</msg>
+
+</messages>
+
