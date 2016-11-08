@@ -10,7 +10,7 @@ Target Device  : xc7z020
 Target Package : clg484
 Target Speed   : -3
 Mapper Version : zynq -- $Revision: 1.55 $
-Mapped Date    : Tue Nov 08 01:56:35 2016
+Mapped Date    : Tue Nov 08 11:14:29 2016
 
 Design Summary
 --------------
@@ -102,9 +102,9 @@ Specific Feature Utilization:
 
 Average Fanout of Non-Clock Nets:                2.97
 
-Peak Memory Usage:  581 MB
-Total REAL time to MAP completion:  1 mins 8 secs 
-Total CPU time to MAP completion:   1 mins 6 secs 
+Peak Memory Usage:  582 MB
+Total REAL time to MAP completion:  1 mins 7 secs 
+Total CPU time to MAP completion:   1 mins 4 secs 
 
 Table of Contents
 -----------------

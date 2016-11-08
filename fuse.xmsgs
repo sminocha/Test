@@ -5,5 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="568" delta="unknown" >"Z:/groups/02/lab5/song_rom.v" Line 136: Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">6</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"Z:/groups/02/lab5/music_player_tb.v" Line 6: Port <arg fmt="%s" index="1">new_sample_generated</arg> is not connected to this instance
+</msg>
+
 </messages>
 

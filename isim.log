@@ -1,5 +1,5 @@
 ISim log file
-Running: Z:\groups\02\lab5\wave_display_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb Z:/groups/02/lab5/wave_display_tb_isim_beh.wdb 
+Running: Z:\groups\02\lab5\music_player_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb Z:/groups/02/lab5/music_player_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0x8ef4fb42)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -10,4 +10,25 @@ Time resolution is 1 ps
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
+Audio out: sound file audio.snd opened for output.
 Finished circuit initialization process.
+Starting playing song 0...
+# run all
+[15359855000] Audio out: generated 1 seconds.
+Pause...
+Resume playing song 0...
+Stopped at time : 26823080 ns : File "//afs/ir/class/ee108/groups/02/lab5/music_player_tb.v" Line 43
+# restart
+# run 1.00us
+Simulator is doing circuit initialization process.
+Audio out: sound file audio.snd opened for output.
+Finished circuit initialization process.
+Starting playing song 0...
+# run all
+[15359855000] Audio out: generated 1 seconds.
+Pause...
+Stopped at time : 24642895 ns : File "//afs/ir/class/ee108/groups/02/lab5/ac97_if_isim.v" Line 43
+# run all
+Resume playing song 0...
+[30719855000] Audio out: generated 2 seconds.
+Stopped at time : 34047140 ns : File "//afs/ir/class/ee108/groups/02/lab5/music_player_tb.v" Line 43

@@ -80,7 +80,7 @@ module wave_capture (
 					end
 				default: begin
 					next_count = 0;
-					next_state = 0;
+					next_state = `ARMED;
 					next_read_index = 0;
 					next_sample = 0;
 					end
@@ -94,47 +94,3 @@ module wave_capture (
 	assign read_index = (reset) ? 1'b0 : curr_read_index;
 	
 endmodule
-
-
-//
-//	case(state)
-//			`ARMED:
-//			begin
-//				next_count = 1'b0;
-//														
-//				if (new_sample_in[15] == 0 
-//					&& sample[15] == 1) begin		//stay in armed state until see positive zero crossing on audio output 
-//																	//how to implement w/o dffr?
-//					next_state = `ACTIVE;					
-//					r_i = 1'b0;									//move to outside if statement? also can't just set to 0, needs to hold from wait state (so can invert next time)
-//				end
-//			end
-//			`ACTIVE:
-//				begin
-//				if (reset) begin
-//					next_state = `ARMED;
-//				end
-//				if (curr_count == 4) begin					//once final sample is written, move to wait state 
-//																	//how do I add one cycle delay here?
-//				
-//					next_state = `WAIT;
-//				end else begin									//store 8 MSBs of the remaining samples into the RAM (in appropriate RAM location)
-//					w_sam = new_sample_in[15:8];		
-//					w_addr = {~r_i, curr_count};	
-//					next_count = curr_count + 1'b1;		//increment counter to process next audio sample
-//				end
-//				end
-//			`WAIT:
-//			begin
-//				if (reset) begin
-//					next_state = `ARMED;
-//				end
-//				if (wave_display_idle) begin				//sit in wait state until wave_display_idle is 1, then invert r_i and switch to armed state
-////					if (curr_count == 4) begin				//need this line? if I am in wait state I should already be at max curr_count
-//						r_i = ~r_i;								//INFERRING LATCH?
-//						next_state = `ARMED;
-////					end
-//				end
-//				end
-//		endcase
-//	end 

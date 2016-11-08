@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: lab5_top.prj
 
@@ -1692,12 +1692,12 @@ clk_100                               | PLLE2_ADV:CLKOUT2      | 1     |
 
 Asynchronous Control Signals Information:
 ----------------------------------------
----------------------------------------------+-------------------------------------------------------------------------------+-------+
-Control Signal                               | Buffer(FF name)                                                               | Load  |
----------------------------------------------+-------------------------------------------------------------------------------+-------+
-VGA_R_0_OBUF(XST_GND:G)                      | NONE(music_player/song_reader_rom/Mram_addr[6]_memory[127][11]_wide_mux_1_OUT)| 6     |
-wd_top/write_en(wd_top/wc/write_enable<1>1:O)| NONE(wd_top/sample_ram/Mram_RAM)                                              | 2     |
----------------------------------------------+-------------------------------------------------------------------------------+-------+
+---------------------------------------------+----------------------------------------------------------------------------------------------+-------+
+Control Signal                               | Buffer(FF name)                                                                              | Load  |
+---------------------------------------------+----------------------------------------------------------------------------------------------+-------+
+VGA_R_0_OBUF(XST_GND:G)                      | NONE(music_player/note_player/sine_read_sineRom/Mram_addr[9]_memory[1023][15]_wide_mux_1_OUT)| 6     |
+wd_top/write_en(wd_top/wc/write_enable<1>1:O)| NONE(wd_top/sample_ram/Mram_RAM)                                                             | 2     |
+---------------------------------------------+----------------------------------------------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
@@ -1890,12 +1890,12 @@ clk_100                               |    3.392|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 29.00 secs
-Total CPU time to Xst completion: 28.73 secs
+Total REAL time to Xst completion: 24.00 secs
+Total CPU time to Xst completion: 24.36 secs
  
 --> 
 
-Total memory usage is 296528 kilobytes
+Total memory usage is 297920 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  367 (   0 filtered)
