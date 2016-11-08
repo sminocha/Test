@@ -1,20 +1,26 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o Z:/groups/02/lab5/wave_display_isim_beh.exe -prj Z:/groups/02/lab5/wave_display_beh.prj work.wave_display work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o Z:/groups/02/lab5/wave_display_tb_isim_beh.exe -prj Z:/groups/02/lab5/wave_display_tb_beh.prj work.wave_display_tb work.glbl 
 ISim P.20131013 (signature 0x8ef4fb42)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
-Analyzing Verilog file "Z:/groups/02/lab5/ram_1w2r.v" into library work
 Analyzing Verilog file "Z:/groups/02/lab5/ff_lib.v" into library work
 Analyzing Verilog file "Z:/groups/02/lab5/wave_display.v" into library work
-ERROR:HDLCompiler:1660 - "Z:/groups/02/lab5/wave_display.v" Line 50: Procedural assignment to a non-register valid_pixel is not permitted, left-hand side should be reg/integer/time/genvar
-ERROR:HDLCompiler:1660 - "Z:/groups/02/lab5/wave_display.v" Line 50: Procedural assignment to a non-register valid_pixel is not permitted, left-hand side should be reg/integer/time/genvar
-ERROR:HDLCompiler:1660 - "Z:/groups/02/lab5/wave_display.v" Line 51: Procedural assignment to a non-register valid_pixel is not permitted, left-hand side should be reg/integer/time/genvar
-ERROR:HDLCompiler:1660 - "Z:/groups/02/lab5/wave_display.v" Line 51: Procedural assignment to a non-register valid_pixel is not permitted, left-hand side should be reg/integer/time/genvar
-ERROR:HDLCompiler:1660 - "Z:/groups/02/lab5/wave_display.v" Line 52: Procedural assignment to a non-register valid_pixel is not permitted, left-hand side should be reg/integer/time/genvar
-ERROR:HDLCompiler:1660 - "Z:/groups/02/lab5/wave_display.v" Line 52: Procedural assignment to a non-register valid_pixel is not permitted, left-hand side should be reg/integer/time/genvar
-ERROR:HDLCompiler:1660 - "Z:/groups/02/lab5/wave_display.v" Line 53: Procedural assignment to a non-register valid_pixel is not permitted, left-hand side should be reg/integer/time/genvar
-ERROR:HDLCompiler:1660 - "Z:/groups/02/lab5/wave_display.v" Line 53: Procedural assignment to a non-register valid_pixel is not permitted, left-hand side should be reg/integer/time/genvar
-ERROR:HDLCompiler:1660 - "Z:/groups/02/lab5/wave_display.v" Line 54: Procedural assignment to a non-register valid_pixel is not permitted, left-hand side should be reg/integer/time/genvar
-ERROR:HDLCompiler:1660 - "Z:/groups/02/lab5/wave_display.v" Line 54: Procedural assignment to a non-register valid_pixel is not permitted, left-hand side should be reg/integer/time/genvar
-ERROR:HDLCompiler:598 - "Z:/groups/02/lab5/wave_display.v" Line 4: Module <wave_display> ignored due to previous errors.
-Verilog file Z:/groups/02/lab5/wave_display.v ignored due to errors
+Analyzing Verilog file "Z:/groups/02/lab5/fake_sample_ram.v" into library work
+Analyzing Verilog file "Z:/groups/02/lab5/wave_display_tb.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 104744 KB
+Fuse CPU Usage: 639 ms
+Compiling module dffr(WIDTH=9)
+Compiling module dffre(WIDTH=8)
+Compiling module wave_display
+Compiling module fake_sample_ram
+Compiling module wave_display_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 3 sub-compilation(s) to finish...
+Compiled 6 Verilog Units
+Built simulation executable Z:/groups/02/lab5/wave_display_tb_isim_beh.exe
+Fuse Memory Usage: 128920 KB
+Fuse CPU Usage: 1013 ms

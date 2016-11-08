@@ -1,0 +1,80 @@
+module wave_capture (
+    input clk,
+    input reset,
+    input new_sample_ready,
+    input [15:0] new_sample_in,
+    input wave_display_idle,
+
+    output wire [8:0] write_address,
+    output wire write_enable,
+    output wire [7:0] write_sample,
+    output wire read_index
+);
+
+	parameter ARMED = 2'b00;
+	parameter ACTIVE = 2'b01;
+	parameter WAIT = 2'b11;
+
+	reg [15:0] curr_new_sample_in, curr_sample;
+	reg next_count, curr_count, next_read_index, curr_read_index, idle;
+	reg [1:0] state, next_state;
+
+	dffr #(2) state_ff (										//ff keeping track of which state we are in (armed, active, wait)
+							.clk(clk),
+							.r(reset),
+							.d(next_state),
+							.q(state));
+
+//	dffr #(16) zero_crossing (								//ff that waits to see a positive zero crossing on the audio output
+//							.clk(clk), 
+//							.r(reset), 
+//							.d(new_sample_in), 
+//							.q(curr_sample));
+	
+	dffre sample_counter (									//once in active state, store 8 MSBs of next 256 audio samples into RAM
+							.clk(clk), 
+							.r(reset), 
+							.en(new_sample_ready),
+							.d(next_count), 
+							.q(curr_count));
+	
+	dffre #(16) topbit_writer (
+							.clk(clk),
+							.r(reset),
+							.en(new_sample_ready),
+							.d(new_sample_in),
+							.q(curr_new_sample_in));
+							
+	dffre read_indexer (										//don't flip read_index while wave_display is reading from RAM or while wave_capture is 
+							.clk(clk),
+							.r(reset),
+							.en(idle),
+							.d(next_read_index),
+							.q(curr_read_index));
+	
+	always @(*) begin
+		case(state)
+			ARMED:
+				//wait to see positive zero crossing on audio output (then switch to active state)
+				if (new_sample_in == 0) begin
+					next_state = ACTIVE;
+				end
+//				if (curr_new_sample_in == 0) begin
+//					next_count = 0;
+//				end else begin
+//					next_count = curr_count + 1;
+//				end
+			ACTIVE:
+				if (curr_count == 255) begin
+					next_state = WAIT;
+				end				
+			WAIT:
+				if (wave_display_idle) begin
+					//put this if block before or after next_state assignemnt?
+					if (curr_count == 255) begin
+						read_index = ~read_index;
+					end
+					next_state = ARMED;
+				end
+				
+endmodule

@@ -16,78 +16,43 @@ module wave_display (
     output wire [7:0] b
 );
 
-	wire [8:0] curr_addr = {read_index , x[9:1]} ;
-	wire [8:0] next_addr;
-	wire [8:0] read_addr;
-
-	dffr # (`ADDR_WIDTH) (.clk(clk), 
-							.r(reset), 
-							.d(next_addr), 
-							.q(curr_addr));
-							
-	wire [7:0] ram_value;							
-	wire [7:0] curr_value;
-	wire [7:0] next_value;
-
-							
-	ram_1w2r ram (.clkb(clk),
-					  .addrb(read_addr),
-				     .doutb(read_value));
-
-				  
-	dffr # (`VALUE_WIDTH) (.clk(clk), 
-							     .r(reset), 
-							     .d(read_value),
-							     .q(next_value)); 
-				  
-	dffr # (`VALUE_WIDTH) (.clk(clk), 
-							     .r(reset), 
-							     .d(next_value), 
-							     .q(curr_value));
-							  
-	always @(*) begin
-		casex( x[9:8] )
-			2'b00 : valid_pixel = 0;
-			2'b01 : valid_pixel = 1;
-			2'b11 : valid_pixel = 0;
-			2'b10 : valid_pixel = 1;
-			default: valid_pixel = 0;
-		endcase
-	end
+	wire [8:0] curr_addr = {read_index, ~x[8], x[7:1]} ;
+	wire [8:0] prev_addr;
+	wire [7:0] prev_value;
 	
-//	always @(*) begin
-//		if ( ( curr_value < y[8:1] && y[8:1] < next_value ) || 
-//			( next_value < y[8:1] && y[8:1] < curr_value ) && (valid == 1))
-//			begin
-//			valid_pixel = 1;
-//			r = 7'b1111111;
-//			g = 7'b1111111;
-//			b = 7'b1111111;			
-//			end
-//		else
-//			begin
-//			valid_pixel = 0;
-//			r = 7'b0000000;
-//			g = 7'b0000000;
-//			b = 7'b0000000;
-//			end
-//	end
-
-   wire [23:0] color = {r, g, b};
-	assign valid_pixel = (( curr_value < y[8:1] && y[8:1] < next_value ) || 
-								 ( next_value < y[8:1] && y[8:1] < curr_value ) && 
-								 (valid == 1)) 
-								 ? 1 : 0;
+	
+	
+	// This dffr keeps track of the address inputs.
+	// If the inputs are not changing, then the read_value
+	// also should not change.
+	dffr # (`ADDR_WIDTH) address_cycle (
+								.clk(clk), 
+								.r(reset),
+								//.en(prev_addr == curr_addr),
+								.d(curr_addr), 
+								.q(prev_addr));
+							
+	// This dffr stores the current value taken from RAM.
+	dffre # (`VALUE_WIDTH) delay_value (
+								  .clk(clk), 
+							     .r(reset),
+								  .en(prev_addr == curr_addr),
+							     .d(read_value),
+							     .q(prev_value)); 
 								 
-	assign color = (( curr_value < y[8:1] && y[8:1] < next_value ) || 
-					( next_value < y[8:1] && y[8:1] < curr_value ) && 
-					(valid == 1)) 
-					? 7'b1111111 : 7'b0000000;
-					
-	assign r = color[23:16];
-	assign g = color[15:8];
-	assign b = color[7:0];
-
-	assign read_address = (curr_addr == next_addr) ? 9'd0 : next_addr;
-
+	wire valid_x, valid_y;
+								 
+	assign valid_x = (x[10:8] == 3'b001 || x[10:8] == 3'b010);
+	
+	assign valid_y = ( ( ( (read_value < y[8:1]) && (y[8:1] < prev_value) ) || 
+						  ( (prev_value < y[8:1]) && (y[8:1] < read_value) ) )  &&
+				        (y[9] == 0)
+				        ); 
+				   
+	assign valid_pixel = valid_x && valid_y && valid;
+	
+	assign {r, g, b} = (valid_pixel) ? 24'h8A2BE2 : 24'h000000;
+	
+	assign read_address = prev_addr;
+	
 endmodule
