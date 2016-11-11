@@ -12,6 +12,7 @@
          <ClosedNode>/clamper - Behavioral Z:|groups|02|lab5|clamper.vhd</ClosedNode>
          <ClosedNode>/codec_conditioner Z:|groups|02|lab5|codec_conditioner.v</ClosedNode>
          <ClosedNode>/dvi_controller_top Z:|groups|02|lab5|dvi_controller_top.v</ClosedNode>
+         <ClosedNode>/lab5_top Z:|groups|02|lab5|lab5_top.v</ClosedNode>
          <ClosedNode>/lab5_top Z:|groups|02|lab5|lab5_top.v/adau1761_codec - adau1761_codec</ClosedNode>
          <ClosedNode>/lab5_top Z:|groups|02|lab5|lab5_top.v/adau1761_codec - adau1761_codec/i2c_interface - adau1761_izedboard - Behavioral</ClosedNode>
          <ClosedNode>/lab5_top Z:|groups|02|lab5|lab5_top.v/hdmi - vga_hdmi - Behavioral</ClosedNode>
@@ -23,6 +24,7 @@
          <ClosedNode>/lab5_top Z:|groups|02|lab5|lab5_top.v/next_button_press_unit - button_press_unit/sync - brute_force_synchronizer</ClosedNode>
          <ClosedNode>/lab5_top Z:|groups|02|lab5|lab5_top.v/play_button_press_unit - button_press_unit</ClosedNode>
          <ClosedNode>/sine_reader Z:|groups|02|lab5|sine_reader.v</ClosedNode>
+         <ClosedNode>/wave_capture_tb Z:|groups|02|lab5|wave_capture_tb.v</ClosedNode>
          <ClosedNode>/wave_capture_tb Z:|groups|02|lab5|wave_capture_tb.v/dut - wave_capture</ClosedNode>
          <ClosedNode>/wave_display_tb Z:|groups|02|lab5|wave_display_tb.v</ClosedNode>
          <ClosedNode>/zedboard_hdmi - Behavioral Z:|groups|02|lab5|zedboard_hdmi.vhd</ClosedNode>
@@ -31,9 +33,9 @@
       <SelectedItems>
          <SelectedItem>lab5_top (Z:/groups/02/lab5/lab5_top.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >11</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ac000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ac0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000014c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000014c0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>lab5_top (Z:/groups/02/lab5/lab5_top.v)</CurrentItem>
    </ItemView>
@@ -105,13 +107,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Generate Programming File</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000c9000000010000000100000000000000000000000064ffffffff000000810000000000000001000000c90000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Generate Programming File</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000001a10000013601000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>

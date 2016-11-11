@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> Reading design: lab5_top.prj
 
@@ -305,6 +305,7 @@ Elaborating module <wave_display>.
 Elaborating module <dffr(WIDTH=9)>.
 
 Elaborating module <dffre(WIDTH=8)>.
+WARNING:HDLCompiler:413 - "\\afs\ir\class\ee108\groups\02\lab5\wave_display.v" Line 54: Result of 32-bit expression is truncated to fit in 9-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -806,15 +807,17 @@ Unit <ram_1w2r> synthesized.
 
 Synthesizing Unit <wave_display>.
     Related source file is "\\afs\ir\class\ee108\groups\02\lab5\wave_display.v".
-WARNING:Xst:647 - Input <x<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <y<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 9-bit comparator equal for signal <prev_addr[8]_curr_addr[8]_equal_1_o> created at line 39
-    Found 8-bit comparator greater for signal <read_value[7]_y[8]_LessThan_4_o> created at line 47
-    Found 8-bit comparator greater for signal <y[8]_prev_value[7]_LessThan_5_o> created at line 47
-    Found 8-bit comparator greater for signal <prev_value[7]_y[8]_LessThan_6_o> created at line 48
-    Found 8-bit comparator greater for signal <y[8]_read_value[7]_LessThan_7_o> created at line 48
+    Found 12-bit adder for signal <n0041[11:0]> created at line 27.
+    Found 9-bit comparator equal for signal <prev_addr[8]_read_address[8]_equal_4_o> created at line 42
+    Found 8-bit comparator lessequal for signal <n0011> created at line 58
+    Found 8-bit comparator lessequal for signal <n0013> created at line 58
+    Found 8-bit comparator lessequal for signal <n0016> created at line 59
+    Found 8-bit comparator lessequal for signal <n0018> created at line 59
     Summary:
+	inferred   1 Adder/Subtractor(s).
 	inferred   5 Comparator(s).
+	inferred   2 Multiplexer(s).
 Unit <wave_display> synthesized.
 
 Synthesizing Unit <dffr_7>.
@@ -844,9 +847,9 @@ Macro Statistics
  512x8-bit dual-port RAM                               : 2
  64x16-bit single-port Read Only RAM                   : 1
  64x20-bit single-port Read Only RAM                   : 1
-# Adders/Subtractors                                   : 22
+# Adders/Subtractors                                   : 23
  10-bit adder                                          : 2
- 12-bit adder                                          : 2
+ 12-bit adder                                          : 3
  16-bit subtractor                                     : 2
  20-bit adder                                          : 2
  22-bit adder                                          : 1
@@ -857,7 +860,7 @@ Macro Statistics
  8-bit adder                                           : 4
  8-bit subtractor                                      : 1
  9-bit adder                                           : 4
-# Registers                                            : 118
+# Registers                                            : 119
  1-bit register                                        : 44
  10-bit register                                       : 3
  12-bit register                                       : 7
@@ -875,13 +878,13 @@ Macro Statistics
  5-bit register                                        : 2
  6-bit register                                        : 2
  64-bit register                                       : 1
- 8-bit register                                        : 14
+ 8-bit register                                        : 15
  9-bit register                                        : 12
 # Comparators                                          : 7
  12-bit comparator lessequal                           : 2
- 8-bit comparator greater                              : 4
+ 8-bit comparator lessequal                            : 4
  9-bit comparator equal                                : 1
-# Multiplexers                                         : 167
+# Multiplexers                                         : 169
  1-bit 2-to-1 multiplexer                              : 77
  1-bit 3-to-1 multiplexer                              : 1
  1-bit 4-to-1 multiplexer                              : 3
@@ -893,6 +896,7 @@ Macro Statistics
  29-bit 2-to-1 multiplexer                             : 5
  3-bit 2-to-1 multiplexer                              : 6
  3-bit 7-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 2
  4-bit 2-to-1 multiplexer                              : 13
  6-bit 2-to-1 multiplexer                              : 2
  64-bit 2-to-1 multiplexer                             : 1
@@ -917,12 +921,10 @@ WARNING:Xst:2677 - Node <q_16> of sequential type is unconnected in block <sampl
 WARNING:Xst:2677 - Node <ypos_0> of sequential type is unconnected in block <i_vga_generator>.
 WARNING:Xst:2677 - Node <ypos_10> of sequential type is unconnected in block <i_vga_generator>.
 WARNING:Xst:2677 - Node <ypos_11> of sequential type is unconnected in block <i_vga_generator>.
-WARNING:Xst:2677 - Node <xpos_0> of sequential type is unconnected in block <i_vga_generator>.
 WARNING:Xst:2677 - Node <xpos_11> of sequential type is unconnected in block <i_vga_generator>.
 WARNING:Xst:2677 - Node <ypos_0> of sequential type is unconnected in block <hdmi>.
 WARNING:Xst:2677 - Node <ypos_10> of sequential type is unconnected in block <hdmi>.
 WARNING:Xst:2677 - Node <ypos_11> of sequential type is unconnected in block <hdmi>.
-WARNING:Xst:2677 - Node <xpos_0> of sequential type is unconnected in block <hdmi>.
 WARNING:Xst:2677 - Node <xpos_11> of sequential type is unconnected in block <hdmi>.
 WARNING:Xst:2677 - Node <q_0> of sequential type is unconnected in block <sample_ff>.
 WARNING:Xst:2677 - Node <q_1> of sequential type is unconnected in block <sample_ff>.
@@ -1084,8 +1086,9 @@ Macro Statistics
  512x8-bit dual-port block RAM                         : 1
  64x16-bit single-port distributed Read Only RAM       : 1
  64x20-bit single-port distributed Read Only RAM       : 1
-# Adders/Subtractors                                   : 11
+# Adders/Subtractors                                   : 12
  10-bit adder                                          : 1
+ 12-bit adder                                          : 1
  16-bit subtractor                                     : 2
  4-bit subtractor                                      : 1
  6-bit adder                                           : 1
@@ -1102,13 +1105,13 @@ Macro Statistics
  9-bit up counter                                      : 1
 # Accumulators                                         : 1
  22-bit up accumulator                                 : 1
-# Registers                                            : 822
- Flip-Flops                                            : 822
+# Registers                                            : 830
+ Flip-Flops                                            : 830
 # Comparators                                          : 7
  12-bit comparator lessequal                           : 2
- 8-bit comparator greater                              : 4
+ 8-bit comparator lessequal                            : 4
  9-bit comparator equal                                : 1
-# Multiplexers                                         : 138
+# Multiplexers                                         : 140
  1-bit 2-to-1 multiplexer                              : 54
  1-bit 3-to-1 multiplexer                              : 1
  1-bit 4-to-1 multiplexer                              : 3
@@ -1120,6 +1123,7 @@ Macro Statistics
  29-bit 2-to-1 multiplexer                             : 5
  3-bit 2-to-1 multiplexer                              : 6
  3-bit 7-to-1 multiplexer                              : 1
+ 32-bit 2-to-1 multiplexer                             : 2
  4-bit 2-to-1 multiplexer                              : 13
  6-bit 2-to-1 multiplexer                              : 1
  64-bit 2-to-1 multiplexer                             : 1
@@ -1313,7 +1317,6 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hdmi/i_convert_444_
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hdmi/i_convert_444_422/g2_out_7> (without init value) has a constant value of 0 in block <lab5_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <hdmi/i_convert_444_422/g2_out_8> (without init value) has a constant value of 0 in block <lab5_top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <hdmi/ypos_0> of sequential type is unconnected in block <lab5_top>.
-WARNING:Xst:2677 - Node <hdmi/xpos_0> of sequential type is unconnected in block <lab5_top>.
 WARNING:Xst:2677 - Node <sample_reg/q_16> of sequential type is unconnected in block <lab5_top>.
 WARNING:Xst:2677 - Node <sample_reg/q_7> of sequential type is unconnected in block <lab5_top>.
 WARNING:Xst:2677 - Node <sample_reg/q_6> of sequential type is unconnected in block <lab5_top>.
@@ -1500,7 +1503,6 @@ WARNING:Xst:2677 - Node <adau1761_codec/i2c_interface/Inst_i2s_data_interface/sr
 WARNING:Xst:2677 - Node <adau1761_codec/i2c_interface/Inst_i2s_data_interface/sr_in_0> of sequential type is unconnected in block <lab5_top>.
 WARNING:Xst:2677 - Node <adau1761_codec/i2c_interface/Inst_i2s_data_interface/i2s_d_in_last> of sequential type is unconnected in block <lab5_top>.
 WARNING:Xst:2677 - Node <hdmi/i_vga_generator/xpos_11> of sequential type is unconnected in block <lab5_top>.
-WARNING:Xst:2677 - Node <hdmi/i_vga_generator/xpos_0> of sequential type is unconnected in block <lab5_top>.
 WARNING:Xst:2677 - Node <hdmi/i_vga_generator/ypos_11> of sequential type is unconnected in block <lab5_top>.
 WARNING:Xst:2677 - Node <hdmi/i_vga_generator/ypos_10> of sequential type is unconnected in block <lab5_top>.
 WARNING:Xst:2677 - Node <hdmi/i_vga_generator/ypos_0> of sequential type is unconnected in block <lab5_top>.
@@ -1567,8 +1569,8 @@ Unit <lab5_top> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 543
- Flip-Flops                                            : 543
+# Registers                                            : 553
+ Flip-Flops                                            : 553
 # Shift Registers                                      : 7
  2-bit shift register                                  : 1
  3-bit shift register                                  : 2
@@ -1597,24 +1599,24 @@ Top Level Output File Name         : lab5_top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1133
+# BELS                             : 1140
 #      GND                         : 1
-#      INV                         : 43
+#      INV                         : 42
 #      LUT1                        : 110
-#      LUT2                        : 123
-#      LUT3                        : 127
-#      LUT4                        : 69
-#      LUT5                        : 85
-#      LUT6                        : 222
+#      LUT2                        : 121
+#      LUT3                        : 130
+#      LUT4                        : 68
+#      LUT5                        : 90
+#      LUT6                        : 225
 #      MUXCY                       : 168
 #      MUXF7                       : 5
 #      VCC                         : 1
 #      XORCY                       : 179
-# FlipFlops/Latches                : 560
-#      FD                          : 173
-#      FDE                         : 152
+# FlipFlops/Latches                : 570
+#      FD                          : 174
+#      FDE                         : 153
 #      FDR                         : 100
-#      FDRE                        : 96
+#      FDRE                        : 104
 #      FDSE                        : 29
 #      ODDR                        : 10
 # RAMS                             : 4
@@ -1641,17 +1643,17 @@ Selected Device : 7z020clg484-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             560  out of  106400     0%  
- Number of Slice LUTs:                  786  out of  53200     1%  
-    Number used as Logic:               779  out of  53200     1%  
+ Number of Slice Registers:             570  out of  106400     0%  
+ Number of Slice LUTs:                  793  out of  53200     1%  
+    Number used as Logic:               786  out of  53200     1%  
     Number used as Memory:                7  out of  17400     0%  
        Number used as SRL:                7
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    881
-   Number with an unused Flip Flop:     321  out of    881    36%  
-   Number with an unused LUT:            95  out of    881    10%  
-   Number of fully used LUT-FF pairs:   465  out of    881    52%  
+ Number of LUT Flip Flop pairs used:    892
+   Number with an unused Flip Flop:     322  out of    892    36%  
+   Number with an unused LUT:            99  out of    892    11%  
+   Number of fully used LUT-FF pairs:   471  out of    892    52%  
    Number of unique control sets:        29
 
 IO Utilization: 
@@ -1685,7 +1687,7 @@ Clock Information:
 --------------------------------------+------------------------+-------+
 Clock Signal                          | Clock buffer(FF name)  | Load  |
 --------------------------------------+------------------------+-------+
-clk_100                               | PLLE2_ADV:CLKOUT1      | 498   |
+clk_100                               | PLLE2_ADV:CLKOUT1      | 508   |
 adau1761_codec/codec_clock_gen/clkout0| BUFG                   | 78    |
 clk_100                               | PLLE2_ADV:CLKOUT2      | 1     |
 --------------------------------------+------------------------+-------+
@@ -1704,9 +1706,9 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 3.588ns (Maximum Frequency: 278.738MHz)
-   Minimum input arrival time before clock: 1.878ns
+   Minimum input arrival time before clock: 1.879ns
    Maximum output required time after clock: 1.083ns
-   Maximum combinational path delay: 0.404ns
+   Maximum combinational path delay: 0.405ns
 
 Timing Details:
 ---------------
@@ -1714,28 +1716,42 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_100'
-  Clock period: 3.392ns (frequency: 294.811MHz)
-  Total number of paths / destination ports: 8559 / 1150
+  Clock period: 3.171ns (frequency: 315.378MHz)
+  Total number of paths / destination ports: 13173 / 1169
 -------------------------------------------------------------------------
-Delay:               3.392ns (Levels of Logic = 4)
-  Source:            wd_top/sample_ram/Mram_RAM (RAM)
-  Destination:       hdmi/i_vga_generator/b_7 (FF)
+Delay:               3.171ns (Levels of Logic = 18)
+  Source:            music_player/note_player/sine_read_sineRom/Mram_addr[9]_memory[1023][15]_wide_mux_1_OUT (RAM)
+  Destination:       music_player/codec_conditioner/next_sample_latch/q_15 (FF)
   Source Clock:      clk_100 rising
   Destination Clock: clk_100 rising
 
-  Data Path: wd_top/sample_ram/Mram_RAM to hdmi/i_vga_generator/b_7
+  Data Path: music_player/note_player/sine_read_sineRom/Mram_addr[9]_memory[1023][15]_wide_mux_1_OUT to music_player/codec_conditioner/next_sample_latch/q_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB18E1:CLKARDCLK->DOBDO3    3   1.846   0.353  wd_top/sample_ram/Mram_RAM (wd_top/read_sample<3>)
-     LUT4:I2->O            4   0.043   0.442  wd_top/wd/y[8]_read_value[7]_LessThan_7_o1_SW0 (N92)
-     LUT5:I2->O            1   0.043   0.289  wd_top/wd/y[8]_read_value[7]_LessThan_7_o1 (wd_top/wd/y[8]_read_value[7]_LessThan_7_o2)
-     LUT6:I5->O            1   0.043   0.289  wd_top/wd/valid_pixel9 (wd_top/wd/valid_pixel8)
-     LUT6:I5->O            1   0.043   0.000  wd_top/wd/valid_pixel11 (b_1<1>)
-     FDR:D                    -0.001          hdmi/i_vga_generator/b_7
+     RAMB18E1:CLKARDCLK->DOADO0    2   1.846   0.283  music_player/note_player/sine_read_sineRom/Mram_addr[9]_memory[1023][15]_wide_mux_1_OUT (music_player/note_player/sine_read/sine_rom_out<0>)
+     INV:I->O              1   0.053   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_lut<0>_INV_0 (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_lut<0>)
+     MUXCY:S->O            1   0.230   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<0> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<0>)
+     MUXCY:CI->O           1   0.012   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<1> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<1>)
+     MUXCY:CI->O           1   0.012   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<2> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<2>)
+     MUXCY:CI->O           1   0.012   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<3> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<3>)
+     MUXCY:CI->O           1   0.012   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<4> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<4>)
+     MUXCY:CI->O           1   0.012   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<5> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<5>)
+     MUXCY:CI->O           1   0.012   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<6> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<6>)
+     MUXCY:CI->O           1   0.012   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<7> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<7>)
+     MUXCY:CI->O           1   0.012   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<8> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<8>)
+     MUXCY:CI->O           1   0.012   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<9> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<9>)
+     MUXCY:CI->O           1   0.012   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<10> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<10>)
+     MUXCY:CI->O           1   0.012   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<11> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<11>)
+     MUXCY:CI->O           1   0.012   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<12> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<12>)
+     MUXCY:CI->O           1   0.012   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<13> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<13>)
+     MUXCY:CI->O           0   0.012   0.000  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<14> (music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_cy<14>)
+     XORCY:CI->O           1   0.251   0.289  music_player/note_player/sine_read/Msub_sine_rom_out[15]_unary_minus_4_OUT_xor<15> (music_player/note_player/sine_read/sine_rom_out[15]_unary_minus_4_OUT<15>)
+     LUT3:I2->O            1   0.043   0.000  music_player/note_player/sine_read/Mmux_sample71 (music_player/note_sample<15>)
+     FDRE:D                   -0.001          music_player/codec_conditioner/next_sample_latch/q_15
     ----------------------------------------
-    Total                      3.392ns (2.018ns logic, 1.374ns route)
-                                       (59.5% logic, 40.5% route)
+    Total                      3.171ns (2.598ns logic, 0.573ns route)
+                                       (81.9% logic, 18.1% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'adau1761_codec/codec_clock_gen/clkout0'
@@ -1764,9 +1780,9 @@ Delay:               3.588ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_100'
-  Total number of paths / destination ports: 251 / 244
+  Total number of paths / destination ports: 268 / 261
 -------------------------------------------------------------------------
-Offset:              1.878ns (Levels of Logic = 5)
+Offset:              1.879ns (Levels of Logic = 5)
   Source:            btn_up (PAD)
   Destination:       wd_top/wc/sample_counter/q_7 (FF)
   Destination Clock: clk_100 rising
@@ -1775,14 +1791,14 @@ Offset:              1.878ns (Levels of Logic = 5)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           147   0.000   0.553  btn_up_IBUF (btn_up_IBUF)
+     IBUF:I->O           155   0.000   0.554  btn_up_IBUF (btn_up_IBUF)
      LUT3:I0->O            3   0.043   0.466  wd_top/wc/Mmux_next_count841 (wd_top/wc/Mmux_next_count11)
      LUT5:I1->O            5   0.043   0.561  wd_top/wc/Mmux_next_count821 (wd_top/wc/Mmux_next_count82)
-     LUT5:I0->O            1   0.043   0.000  wd_top/wc/Mmux_next_count83_F (N220)
+     LUT5:I0->O            1   0.043   0.000  wd_top/wc/Mmux_next_count83_F (N215)
      MUXF7:I0->O           1   0.169   0.000  wd_top/wc/Mmux_next_count83 (wd_top/wc/next_count<7>)
      FDR:D                    -0.001          wd_top/wc/sample_counter/q_7
     ----------------------------------------
-    Total                      1.878ns (0.298ns logic, 1.580ns route)
+    Total                      1.879ns (0.298ns logic, 1.581ns route)
                                        (15.9% logic, 84.1% route)
 
 =========================================================================
@@ -1850,7 +1866,7 @@ Offset:              1.003ns (Levels of Logic = 2)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 2 / 2
 -------------------------------------------------------------------------
-Delay:               0.404ns (Levels of Logic = 1)
+Delay:               0.405ns (Levels of Logic = 1)
   Source:            btn_up (PAD)
   Destination:       adau1761_codec/codec_clock_gen/mmcm_adv_inst:RST (PAD)
 
@@ -1858,10 +1874,10 @@ Delay:               0.404ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           147   0.000   0.404  btn_up_IBUF (btn_up_IBUF)
+     IBUF:I->O           155   0.000   0.405  btn_up_IBUF (btn_up_IBUF)
     MMCME2_ADV:RST             0.000          adau1761_codec/codec_clock_gen/mmcm_adv_inst
     ----------------------------------------
-    Total                      0.404ns (0.000ns logic, 0.404ns route)
+    Total                      0.405ns (0.000ns logic, 0.405ns route)
                                        (0.0% logic, 100.0% route)
 
 =========================================================================
@@ -1884,20 +1900,20 @@ Clock to Setup on destination clock clk_100
 Source Clock                          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------------------------+---------+---------+---------+---------+
 adau1761_codec/codec_clock_gen/clkout0|    1.898|         |         |         |
-clk_100                               |    3.392|         |         |         |
+clk_100                               |    3.171|         |         |         |
 --------------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 24.00 secs
-Total CPU time to Xst completion: 24.36 secs
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 27.12 secs
  
 --> 
 
-Total memory usage is 297920 kilobytes
+Total memory usage is 296784 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  367 (   0 filtered)
+Number of warnings :  363 (   0 filtered)
 Number of infos    :   43 (   0 filtered)
 

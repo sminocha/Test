@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Nov 08 11:15:34 2016
+// Written by: Map P.20131013 on Wed Nov 09 03:41:57 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -256,11 +256,15 @@ TIMEGRP clk_100 = BEL
         "wd_top/wd/delay_value/q_6" BEL "wd_top/wd/delay_value/q_5" BEL
         "wd_top/wd/delay_value/q_4" BEL "wd_top/wd/delay_value/q_3" BEL
         "wd_top/wd/delay_value/q_2" BEL "wd_top/wd/delay_value/q_1" BEL
-        "wd_top/wd/delay_value/q_0" BEL "wd_top/wd/address_cycle/q_8" BEL
-        "wd_top/wd/address_cycle/q_7" BEL "wd_top/wd/address_cycle/q_6" BEL
-        "wd_top/wd/address_cycle/q_5" BEL "wd_top/wd/address_cycle/q_4" BEL
-        "wd_top/wd/address_cycle/q_3" BEL "wd_top/wd/address_cycle/q_2" BEL
-        "wd_top/wd/address_cycle/q_1" BEL "wd_top/wd/address_cycle/q_0" BEL
+        "wd_top/wd/delay_value/q_0" BEL "wd_top/wd/valuedff/q_7" BEL
+        "wd_top/wd/valuedff/q_6" BEL "wd_top/wd/valuedff/q_5" BEL
+        "wd_top/wd/valuedff/q_4" BEL "wd_top/wd/valuedff/q_3" BEL
+        "wd_top/wd/valuedff/q_2" BEL "wd_top/wd/valuedff/q_1" BEL
+        "wd_top/wd/valuedff/q_0" BEL "wd_top/wd/addressdff/q_8" BEL
+        "wd_top/wd/addressdff/q_7" BEL "wd_top/wd/addressdff/q_6" BEL
+        "wd_top/wd/addressdff/q_5" BEL "wd_top/wd/addressdff/q_4" BEL
+        "wd_top/wd/addressdff/q_3" BEL "wd_top/wd/addressdff/q_2" BEL
+        "wd_top/wd/addressdff/q_1" BEL "wd_top/wd/addressdff/q_0" BEL
         "clk_100_IBUF_BUFG" BEL "next_button_press_unit/sync/ff3/Mshreg_q_0"
         BEL "next_button_press_unit/sync/ff3/q_0" BEL
         "play_button_press_unit/sync/ff3/Mshreg_q_0" BEL
@@ -372,7 +376,7 @@ TIMEGRP hdmi_clk = BEL "hdmi/vga_b_3" BEL "hdmi/vga_hs" BEL "hdmi/valid" BEL
         "hdmi/ypos_2" BEL "hdmi/ypos_1" BEL "hdmi/vga_vs" BEL "hdmi/xpos_10"
         BEL "hdmi/xpos_9" BEL "hdmi/xpos_8" BEL "hdmi/xpos_7" BEL
         "hdmi/xpos_6" BEL "hdmi/xpos_5" BEL "hdmi/xpos_4" BEL "hdmi/xpos_3"
-        BEL "hdmi/xpos_2" BEL "hdmi/xpos_1" BEL
+        BEL "hdmi/xpos_2" BEL "hdmi/xpos_1" BEL "hdmi/xpos_0" BEL
         "hdmi/i_hdmi_ddr_output/ddr_gen[7].ODDR_hdmi_d" BEL
         "hdmi/i_hdmi_ddr_output/ddr_gen[6].ODDR_hdmi_d" BEL
         "hdmi/i_hdmi_ddr_output/ddr_gen[5].ODDR_hdmi_d" BEL
@@ -560,13 +564,13 @@ TIMEGRP hdmi_clk = BEL "hdmi/vga_b_3" BEL "hdmi/vga_hs" BEL "hdmi/valid" BEL
         BEL "hdmi/i_vga_generator/xpos_7" BEL "hdmi/i_vga_generator/xpos_6"
         BEL "hdmi/i_vga_generator/xpos_5" BEL "hdmi/i_vga_generator/xpos_4"
         BEL "hdmi/i_vga_generator/xpos_3" BEL "hdmi/i_vga_generator/xpos_2"
-        BEL "hdmi/i_vga_generator/xpos_1" BEL "hdmi/i_vga_generator/ypos_9"
-        BEL "hdmi/i_vga_generator/ypos_8" BEL "hdmi/i_vga_generator/ypos_7"
-        BEL "hdmi/i_vga_generator/ypos_6" BEL "hdmi/i_vga_generator/ypos_5"
-        BEL "hdmi/i_vga_generator/ypos_4" BEL "hdmi/i_vga_generator/ypos_3"
-        BEL "hdmi/i_vga_generator/ypos_2" BEL "hdmi/i_vga_generator/ypos_1"
-        BEL "hdmi/i_vga_generator/de" BEL "hdmi/i_vga_generator/b_7" BEL
-        "hdmi/i_convert_444_422/r2_out_8" BEL
+        BEL "hdmi/i_vga_generator/xpos_1" BEL "hdmi/i_vga_generator/xpos_0"
+        BEL "hdmi/i_vga_generator/ypos_9" BEL "hdmi/i_vga_generator/ypos_8"
+        BEL "hdmi/i_vga_generator/ypos_7" BEL "hdmi/i_vga_generator/ypos_6"
+        BEL "hdmi/i_vga_generator/ypos_5" BEL "hdmi/i_vga_generator/ypos_4"
+        BEL "hdmi/i_vga_generator/ypos_3" BEL "hdmi/i_vga_generator/ypos_2"
+        BEL "hdmi/i_vga_generator/ypos_1" BEL "hdmi/i_vga_generator/de" BEL
+        "hdmi/i_vga_generator/b_7" BEL "hdmi/i_convert_444_422/r2_out_8" BEL
         "hdmi/i_convert_444_422/r2_out_7" BEL
         "hdmi/i_convert_444_422/b2_out_7" BEL "hdmi/i_convert_444_422/de_out"
         BEL "hdmi/i_convert_444_422/g1_out_6" BEL

@@ -10,7 +10,7 @@ Target Device  : xc7z020
 Target Package : clg484
 Target Speed   : -3
 Mapper Version : zynq -- $Revision: 1.55 $
-Mapped Date    : Tue Nov 08 11:14:29 2016
+Mapped Date    : Wed Nov 09 03:40:52 2016
 
 Mapping design into LUTs...
 Running directed packing...
@@ -44,11 +44,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   50%                                       |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
 * TS_clk_100 = PERIOD TIMEGRP "clk_100" 10  | SETUP       |     2.351ns|     3.003ns|       0|           0
-  ns HIGH 50%                               | HOLD        |    -0.241ns|            |      31|        2724
+  ns HIGH 50%                               | HOLD        |    -0.241ns|            |      71|        5275
                                             | MINLOWPULSE |     6.000ns|     4.000ns|       0|           0
 ----------------------------------------------------------------------------------------------------------
-* TS_hdmi_clk = PERIOD TIMEGRP "hdmi_clk" T | SETUP       |     7.603ns|     2.397ns|       0|           0
-  S_clk_100 HIGH 50%                        | HOLD        |    -0.070ns|            |       5|         149
+* TS_hdmi_clk = PERIOD TIMEGRP "hdmi_clk" T | SETUP       |     8.166ns|     1.834ns|       0|           0
+  S_clk_100 HIGH 50%                        | HOLD        |    -0.115ns|            |       4|         370
 ----------------------------------------------------------------------------------------------------------
   TS_hdmi_clk90 = PERIOD TIMEGRP "hdmi_clk9 | MINPERIOD   |     8.737ns|     1.263ns|       0|           0
   0" TS_clk_100 PHASE 3.75 ns HIGH 50%      |             |            |            |        |            
@@ -70,13 +70,13 @@ Analyzed       |
 Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+---
 ----------+
-|TS_clk_100                     |     10.000ns|      4.000ns|     48.979ns|           31|           45|         3556|   
-     9640|
+|TS_clk_100                     |     10.000ns|      4.000ns|     48.979ns|           71|           44|         8190|   
+     9620|
 | TS_adau1761_codec_codec_clock_|     20.833ns|    102.039ns|          N/A|           40|            0|         4569|   
         0|
 | gen_clkout0                   |             |             |             |             |             |             |   
          |
-| TS_hdmi_clk                   |     10.000ns|      2.397ns|          N/A|            5|            0|         5071|   
+| TS_hdmi_clk                   |     10.000ns|      1.834ns|          N/A|            4|            0|         5051|   
         0|
 | TS_hdmi_clk90                 |     10.000ns|      1.263ns|          N/A|            0|            0|            0|   
         0|
@@ -89,54 +89,54 @@ Derivative  |
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 27 secs 
-Total CPU  time at the beginning of Placer: 25 secs 
+Total REAL time at the beginning of Placer: 26 secs 
+Total CPU  time at the beginning of Placer: 26 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:f6ac49f1) REAL time: 30 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:c312841e) REAL time: 28 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:f6ac49f1) REAL time: 30 secs 
+Phase 2.7  Design Feasibility Check (Checksum:c312841e) REAL time: 29 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:f6ac49f1) REAL time: 30 secs 
+Phase 3.31  Local Placement Optimization (Checksum:c312841e) REAL time: 29 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:a491e2d0) REAL time: 35 secs 
+(Checksum:2e4a47b6) REAL time: 34 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:a491e2d0) REAL time: 35 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:2e4a47b6) REAL time: 34 secs 
 
 Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:a491e2d0) REAL time: 35 secs 
+Phase 6.3  Local Placement Optimization (Checksum:2e4a47b6) REAL time: 34 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:a491e2d0) REAL time: 35 secs 
+Phase 7.5  Local Placement Optimization (Checksum:2e4a47b6) REAL time: 34 secs 
 
 Phase 8.8  Global Placement
 ........................................
+............
 ...............
-.........................
-..............................
-..............................
-Phase 8.8  Global Placement (Checksum:20850cd3) REAL time: 1 mins 1 secs 
+.......................
+..........................................................
+Phase 8.8  Global Placement (Checksum:cf3d9ba9) REAL time: 1 mins 1 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:20850cd3) REAL time: 1 mins 1 secs 
+Phase 9.5  Local Placement Optimization (Checksum:cf3d9ba9) REAL time: 1 mins 1 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:6d4afd17) REAL time: 1 mins 4 secs 
+Phase 10.18  Placement Optimization (Checksum:ddda46e6) REAL time: 1 mins 4 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:6d4afd17) REAL time: 1 mins 4 secs 
+Phase 11.5  Local Placement Optimization (Checksum:ddda46e6) REAL time: 1 mins 4 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:6d4afd17) REAL time: 1 mins 4 secs 
+Phase 12.34  Placement Validation (Checksum:ddda46e6) REAL time: 1 mins 4 secs 
 
 Total REAL time to Placer completion: 1 mins 4 secs 
-Total CPU  time to Placer completion: 1 mins 1 secs 
+Total CPU  time to Placer completion: 1 mins 3 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:2500 - This design does not have a PS7 block.
@@ -152,14 +152,14 @@ Design Summary:
 Number of errors:      0
 Number of warnings:    3
 Slice Logic Utilization:
-  Number of Slice Registers:                   550 out of 106,400    1%
-    Number used as Flip Flops:                 550
+  Number of Slice Registers:                   560 out of 106,400    1%
+    Number used as Flip Flops:                 560
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        671 out of  53,200    1%
-    Number used as logic:                      637 out of  53,200    1%
-      Number using O6 output only:             362
+  Number of Slice LUTs:                        678 out of  53,200    1%
+    Number used as logic:                      644 out of  53,200    1%
+      Number using O6 output only:             369
       Number using O5 output only:             101
       Number using O5 and O6:                  174
       Number used as ROM:                        0
@@ -176,14 +176,14 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   254 out of  13,300    1%
-  Number of LUT Flip Flop pairs used:          731
-    Number with an unused Flip Flop:           266 out of     731   36%
-    Number with an unused LUT:                  60 out of     731    8%
-    Number of fully used LUT-FF pairs:         405 out of     731   55%
+  Number of occupied Slices:                   258 out of  13,300    1%
+  Number of LUT Flip Flop pairs used:          741
+    Number with an unused Flip Flop:           266 out of     741   35%
+    Number with an unused LUT:                  63 out of     741    8%
+    Number of fully used LUT-FF pairs:         412 out of     741   55%
     Number of unique control sets:              29
     Number of slice register sites lost
-      to control set restrictions:             107 out of 106,400    1%
+      to control set restrictions:             105 out of 106,400    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -239,7 +239,7 @@ Average Fanout of Non-Clock Nets:                2.97
 
 Peak Memory Usage:  582 MB
 Total REAL time to MAP completion:  1 mins 7 secs 
-Total CPU time to MAP completion:   1 mins 4 secs 
+Total CPU time to MAP completion:   1 mins 6 secs 
 
 Mapping completed.
 See MAP report file "lab5_top_map.mrp" for details.

@@ -1,7 +1,7 @@
 Release 14.7 Drc P.20131013 (nt)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Tue Nov 08 11:16:54 2016
+Wed Nov 09 03:43:18 2016
 
 drc -z lab5_top.ncd lab5_top.pcf
 
